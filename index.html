@@ -1,12 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shoe Hub | Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+<div id="welcomePopup" class="popup">
+    <div class="popup-content">
+        <h2>👟 Welcome to Shoe Hub</h2>
+        <p>Your destination for modern footwear and style.</p>
+        <button onclick="closePopup()">Enter Store</button>
+    </div>
+</div>
+
   <header class="site-header">
     <div class="brand-row">
       
@@ -34,7 +41,7 @@
         <p>Discover premium shoes, bold styling, and seamless browsing across every page. Explore our shop, learn about our brand, and enjoy rich multimedia content.</p>
         <a href="products.html" class="button">Browse Collection</a>
       </div>
-      <img src="assets/shoe-hero.svg" alt="Modern athletic shoe illustration" class="hero-image">
+      <img src="5.png" alt="Modern athletic shoe illustration" class="hero-image">
     </section>
     <!-- Gallery Section -->
     <section class="gallery">
@@ -82,10 +89,43 @@
         loading="lazy">
       </iframe>
     </section>
-  </main>
+    <!-- Contact Form Section -->
+<section class="contact-form">
+  <h2>Customer Registration Form</h2>
+
+  <form action="#">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"
+      placeholder="example@gmail.com" required><br><br>
+
+    <label for="phone">Phone Number:</label><br>
+    <input type="tel" id="phone" name="phone"
+      placeholder="0712345678" required><br><br>
+
+    <label for="gender">Gender:</label><br>
+    <select id="gender" name="gender">
+      <option value="">Select Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
 
   <footer>
     <p>&copy; 2026 Shoe Hub.</p>
   </footer>
+
+<script>
+function closePopup() {
+    document.getElementById("welcomePopup").style.display = "none";
+}
+</script>
+
 </body>
 </html>
